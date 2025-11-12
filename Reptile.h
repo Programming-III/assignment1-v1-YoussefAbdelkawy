@@ -1,29 +1,26 @@
-#include <iostream>
-#include<string>
-
-#include "Animal.h"
-using namespace std;//
-// Created by yusef on 11/12/2025.
 //
+// Created by yusef on 11/12/2025.
+//#include <iostream>
+#include<string>
+using namespace std;//
 #include "Animal.h"
-#ifndef PROG1ASSIGMENT_MAMMAL_H
-#define PROG1ASSIGMENT_MAMMAL_H
+#ifndef PROG1ASSIGMENT_REPTILE_H
+#define PROG1ASSIGMENT_REPTILE_H
 
 
-class Mammal : public Animal{
-private:
-    string furColor;
+class Reptile : public Animal{
+    private:
+    bool isVenomous;
 public:
-    Mammal() {
-        this->furColor="";
+    Reptile(){this->isVenomous=false;}
+
+    Reptile(string name,int age,bool isHugry,bool isVenomous): Animal( name, age, isHugry) {
+        this->isVenomous = isVenomous;
     }
-    Mammal(string name,int age,bool isHugry,string furColor): Animal( name, age, isHugry) {
-        this->furColor = furColor;
-    }
-    ~Mammal() {
+    ~Reptile() {
 
     }
 };
 
 
-#endif //PROG1ASSIGMENT_MAMMAL_H
+#endif //PROG1ASSIGMENT_REPTILE_H
