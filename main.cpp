@@ -69,6 +69,9 @@ int main() {
     e->addAnimal(r);
 
     e->displayAnimals();
+    delete r;
+        delete b;
+        delete m;
     // TIP Press <shortcut actionId="RenameElement"/> when your caret is at the <b>lang</b> variable name to see how CLion can help you rename it.
 
 
